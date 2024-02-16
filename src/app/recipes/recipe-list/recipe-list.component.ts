@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Recipe} from "../recipe.model";
 
 @Component({
   selector: 'app-recipe-list',
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
 })
 export class RecipeListComponent {
 
-  recipes = [];
+  recipes: Recipe[]  = [
+    new Recipe('A Test Recipe', 'This is simply a test', 'https://img.cuisineaz.com/660x660/2013/12/20/i34581-salade-nicoise-rapide.jpeg'),
+  ];
   constructor() {
   }
   ngOnInit(){
